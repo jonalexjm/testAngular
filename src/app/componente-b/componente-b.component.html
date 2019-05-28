@@ -1,0 +1,42 @@
+<div class="center-block">
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <br>
+                <br>
+                <h2 id="state" >Candidatos</h2>                      
+            </div>
+            <div class="panel-body">               
+                
+                <table class="table table-hover" *ngIf="listCandidatos && listCandidatos.length">
+                  <thead>
+                    <tr>                    
+                      <th>Nombre del candidato</th>
+                      <th>Telefono</th>
+                      <th>Direccion</th>
+                      <th>Email</th>
+                      <th>Aspiracion salarial</th>
+                      <th>Nivel de ingles</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let candidato of listCandidatos ">
+                      <td>{{candidato.nombreCandidato}}</td>
+                      <td>{{candidato.telefono}}</td>
+                      <td>{{candidato.direccion}}</td>
+                      <td>{{candidato.email}}</td>
+                      <td>{{candidato.aspiracionSalarial}}</td>
+                      <td>{{candidato.nivelIngles}}</td>                      
+                      <td>
+                          <button class="btn btn-danger" (click)="pruebaIdi(candidato)">metodo pruebaIdi </button>
+                        
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                
+                
+            </div>
+        </div>
+      </div>
+</div>
